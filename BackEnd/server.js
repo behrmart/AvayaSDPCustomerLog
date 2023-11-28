@@ -1,9 +1,13 @@
 // ServerJS Avaya SDP Customer Log, communication with Mongo DB Atlas
 
+// Avaya SDP customer log Backend
+// by Bernardo F. Martinez Meave
+// Server main program
+
 const express = require ('express')
 const colors = require('colors')
 const dotenv = require ('dotenv').config()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 6666
 const connectDB = require('./config/db')
 const { errorHandler } = require('./middleware/errorMiddleware')
 

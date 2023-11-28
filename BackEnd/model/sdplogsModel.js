@@ -1,3 +1,7 @@
+// Avaya SDP customer log Backend
+// by Bernardo F. Martinez Meave
+// Mongo DB Mongoose driver schema definition
+
 const mongoose = require('mongoose')
 
 const sdplogSchema = mongoose.Schema({

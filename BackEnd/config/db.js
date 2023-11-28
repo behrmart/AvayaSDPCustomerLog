@@ -1,3 +1,7 @@
+// Avaya SDP customer log Backend
+// by Bernardo F. Martinez Meave
+// Mongo DB connection function 
+
 const mongoose = require('mongoose')
 
 const connectDB = async () => {
