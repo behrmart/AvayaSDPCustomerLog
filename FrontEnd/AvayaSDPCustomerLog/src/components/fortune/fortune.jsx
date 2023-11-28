@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 const url = "http://192.168.100.23:3333/fortunejson"; // JSON resource URL
 
 
-
 const Fortune = () => {
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState();
@@ -39,6 +38,7 @@ const Fortune = () => {
                 <div className='p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center'>
                     <div className="spinner-border text-warning" role="status">
                         <span className="visually-hidden">Loading...</span>
+                        {console.log('loading fortune...')}
                     </div>
                 </div>
             </>
@@ -49,6 +49,8 @@ const Fortune = () => {
                 <div className="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 text-center">
                     <p className="text-warning-emphasis">{data.fortunetext[1]}</p>
                     <p className="text-success-emphasis">{data.fortunetype}</p>
+                    <button type="button" className="btn btn-warning">New Fortune</button>
+
                 </div>
 
             </>
@@ -56,5 +58,6 @@ const Fortune = () => {
     }
 
 }
+
 
 export default Fortune
