@@ -11,6 +11,7 @@ const port = process.env.PORT || 6666
 const connectDB = require('./config/db')
 const { errorHandler } = require('./middleware/errorMiddleware')
 
+console.log('Connecting MongoDB...'.yellow)
 connectDB()
 
 const app = express()
@@ -23,4 +24,4 @@ app.use('/api/sdplogs', require('./routes/sdplogsRoutes'))
 
 app.use(errorHandler)
 
-app.listen(port, ()=> console.log(`Avaya SDP Customer log MongoDB server started listening on TCP port: ${port}`))
+app.listen(port, ()=> console.log(`Avaya SDP Customer log MongoDB server started listening on TCP port: ${port}`.red))

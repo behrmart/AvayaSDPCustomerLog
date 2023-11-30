@@ -1,0 +1,9 @@
+{
+    "customer_name":"AT&T",
+    "incident_id":"1-1234567880",
+    "log_entry":{
+        "body": "Descripcion del problema",
+        "log_date": "00000000"
+    },
+    "hidden": "false"
+}

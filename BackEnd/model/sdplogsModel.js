@@ -2,19 +2,19 @@
 // by Bernardo F. Martinez Meave
 // Mongo DB Mongoose driver schema definition
 
+const { hidden } = require('colors')
 const mongoose = require('mongoose')
 
 const sdplogSchema = mongoose.Schema({
-    customer: {
-        type: String,
-        required: [true, "Customer required"]
-    },
-    incident: {
-        type: String
-    },
-    logentry: {
-        type: String
-    }
+    customer_name: String,
+    incident_id: String,
+    log_entry: [
+        {
+            log_body: String,
+            log_date: Date
+        }
+    ],
+    hidden: Boolean
 }, {
     timestamps: true // crea campos automaticos de timestamps
 })

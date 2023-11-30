@@ -13,15 +13,16 @@ const getSdplogs = asyncHandler( async (req, res) => {
 
 const setSdplogs = asyncHandler(async (req, res) => {
     console.log(req.body)
-    if (!req.body.customer){
+    if (!req.body.customer_name){
         res.status(400)
         throw new Error("Customer Name required")
     }
 
     const sdplog = await Sdplog.create({
-        customer: req.body.customer,
-        incident: req.body.incident,
-        logentry: req.body.logentry
+        customer_name: req.body.customer_name,
+        incident_id: req.body.incident_id,
+        log_entry: req.body.log_entry,
+        hidden: req.body.hidden
     })
     res.status(201).json({ sdplog })
 })
