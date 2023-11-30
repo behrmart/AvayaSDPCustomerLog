@@ -21,6 +21,7 @@ app.use(express.urlencoded({extended: false}))
 
 
 app.use('/api/sdplogs', require('./routes/sdplogsRoutes'))
+app.use('/api/users', require('./routes/usersRoutes'))
 
 app.use(errorHandler)
 
