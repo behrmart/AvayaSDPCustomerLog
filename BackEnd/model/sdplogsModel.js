@@ -6,12 +6,17 @@ const { hidden } = require('colors')
 const mongoose = require('mongoose')
 
 const sdplogSchema = mongoose.Schema({
-    customer_name: String,
-    incident_id: String,
+    log_user: { 
+        type: mongoose.Schema.Types.ObjectId,  // Agregar ususarios referenciado a collecion de Users
+        required: true,
+        ref: 'User'
+    },
+    log_customer: String,
+    log_incident_id: String,
+    log_technology: String,
     log_entry: [
         {
             log_date: Date,
-            log_technology: String,
             log_body: String
         }
     ],
