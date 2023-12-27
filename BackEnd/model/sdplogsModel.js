@@ -10,8 +10,9 @@ const sdplogSchema = mongoose.Schema({
     incident_id: String,
     log_entry: [
         {
-            log_body: String,
-            log_date: Date
+            log_date: Date,
+            log_technology: String,
+            log_body: String
         }
     ],
     hidden: Boolean
